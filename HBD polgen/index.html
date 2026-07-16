@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mdntblue</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Quicksand:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ambient-bg" id="ambientBg" aria-hidden="true">
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+  <div class="glow glow-c"></div>
+</div>
+<canvas id="floatCanvas" aria-hidden="true"></canvas>
+
+
+<section id="page1" class="page page-welcome active">
+  <div class="welcome-inner">
+    <p class="eyebrow">a little something for you</p>
+    <h1 class="title-main">
+      <span class="line line-1">Happy Birthday</span>
+      <span class="line line-2">Polgen </span>
+    </h1>
+    
+    <p class="subtitle">Today is all about you </p>
+
+    <button id="openSurpriseBtn" class="btn-cute btn-open">
+      <span>Open Birthday Surprise</span>
+      <span class="gift-icon">🎁</span>
+    </button>
+  </div>
+</section>
+
+
+<section id="page2" class="page page-menu">
+  <header class="menu-header">
+    <p class="menu-eyebrow">welcome to your</p>
+    <h2 class="menu-title">Birthday Wonderland</h2>
+    <p class="menu-subtitle">Pick a little box of magic 💙</p>
+  </header>
+
+  <div class="card-grid">
+   
+    <button class="menu-card" data-target="modalMusic">
+      <span class="card-icon">🎵</span>
+      <span class="card-label">Music</span>
+      <span class="card-sub">a song for you</span>
+    </button>
+
+    <button class="menu-card" data-target="sceneAbout">
+      <span class="card-icon">🌸</span>
+      <span class="card-label">About You</span>
+      <span class="card-sub">who you are</span>
+    </button>
+
+    <button class="menu-card" data-target="sceneLetter">
+      <span class="card-icon">💌</span>
+      <span class="card-label">Letter</span>
+      <span class="card-sub">just for you</span>
+    </button>
+
+    <button class="menu-card" data-target="sceneMemories">
+      <span class="card-icon">📸</span>
+      <span class="card-label">Memories</span>
+      <span class="card-sub">beautiful moments</span>
+    </button>
+  </div>
+</section>
+
+
+<div id="modalMusic" class="overlay modal-overlay">
+  <div class="modal-card music-modal">
+    <button class="close-btn" data-close="modalMusic" aria-label="Close">✕</button>
+    <h3 class="modal-title">Gold Rush <span class="note">🎵</span></h3>
+    <p class="modal-artist">I'm not a fan of taylor swift but this song ngl 10/10</p>
+
+  <div class="video-frame">
+  <video id="ytFrame" width="100%" height="100%" controls playsinline data-src="gold-rush.mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+    </div>
+
+    <div class="equalizer" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="modal-notes" aria-hidden="true"></div>
+</div>
+
+
+<div id="sceneAbout" class="overlay scene-overlay">
+  <button class="close-btn" data-close="sceneAbout" aria-label="Close">✕</button>
+  <h3 class="scene-title">About You 🌸</h3>
+  <div class="word-field" id="wordField"><!-- words injected by JS --></div>
+</div>
+
+<div id="sceneLetter" class="overlay scene-overlay">
+  <button class="close-btn" data-close="sceneLetter" aria-label="Close">✕</button>
+
+  <div class="envelope-wrap" id="envelopeWrap">
+    <div class="envelope" id="envelope">
+      <div class="envelope-back"></div>
+      <div class="letter-paper" id="letterPaper">
+        <p id="letterText" class="letter-text"></p>
+      </div>
+      <div class="envelope-front-pocket"></div>
+      <div class="envelope-flap" id="envelopeFlap"></div>
+      <div class="wax-seal">💙</div>
+    </div>
+    <p class="envelope-hint" id="envelopeHint">tap the envelope to open</p>
+  </div>
+</div>
+
+<div id="sceneMemories" class="overlay scene-overlay">
+  <button class="close-btn" data-close="sceneMemories" aria-label="Close">✕</button>
+  <h3 class="scene-title floaty-caption">Picture of you (don't be mad:)) </h3>
+
+  <div class="carousel" id="carousel">
+    <button class="carousel-arrow arrow-left" id="prevSlide" aria-label="Previous photo">‹</button>
+
+    <div class="carousel-track-wrap">
+      <div class="carousel-track" id="carouselTrack">
+       
+      </div>
+    </div>
+
+    <button class="carousel-arrow arrow-right" id="nextSlide" aria-label="Next photo">›</button>
+  </div>
+
+  <div class="carousel-dots" id="carouselDots"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
