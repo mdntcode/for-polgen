@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
  
   const LETTER_MESSAGE = `Happy Birthday, Polgen 💙
 
-I actually don't have any idea what to say to you, but I hope you realize just how much light you bring into the lives of everyone around you likeeee 90%, -10% kasi 'di ka sumama sa Puerto Galera. Your smile has a way of making difficult days feel lighter.
+I actually don't have any idea what to say to you, but I hope you realize just how much light you bring into the lives of everyone around you likeeee 90%, -10% kasi di ka sumama sa Puerto Galera hahahah. Your smile has a way of making difficult days feel lighter.
 
 You are beautiful not only for your looks, but also for your heart, your warmth, and the way you care for others. The world is so much better because you're in it.
 
@@ -310,8 +310,8 @@ Happy Birthday once again, and may all of your dreams come true. 💙✨`;
 
 
   const PHOTOS = [
-    { src: 'Screenshot 2026-07-16 211600.png', caption: 'hahahaha' },
-    { src: 'Screenshot 2026-07-16 214505.png', caption: 'unfiltered warmth' },
+    { src: 'Screenshot 2026-07-16 211600.png', caption: 'Cute ni Lola' },
+    { src: 'Screenshot 2026-07-16 214505.png', caption: 'Unfiltered warmth' },
     { src: 'Screenshot 2026-07-16 211819.png', caption: 'Me, pag may kasalanan kay mama' },
     { src: 'Screenshot 2026-07-16 213959.png', caption: 'Green Ribbon ngani' },
     { src: 'a12d67d7-8519-47ff-a4b2-8dcba03a4d81.jpg', caption: 'Daragang Magayon💙' }
